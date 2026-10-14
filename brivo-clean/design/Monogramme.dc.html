@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Brivo Clean — le monogramme</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&amp;family=DM+Sans:wght@500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B7A6E}a:hover{color:#0F2A44}
+</style>
+</helmet>
+<div style="width: 640px; height: 420px; box-sizing: border-box; background: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; font-family: 'DM Sans', sans-serif">
+<div style="position: relative; width: 128px; height: 128px; border-radius: 32px; background: {{accent}}; display: flex; align-items: center; justify-content: center">
+<div style="font-family: Sora, sans-serif; font-weight: 700; font-size: 84px; line-height: 1; color: #FFFFFF">B</div>
+<svg width="34" height="34" viewBox="-17 -17 34 34" aria-hidden="true" style="position: absolute; top: 14px; right: 14px"><path d="M0 -16 C2 -5 5 -2 16 0 C5 2 2 5 0 16 C-2 5 -5 2 -16 0 C-5 -2 -2 -5 0 -16 Z" fill="#7FE3D4"></path></svg>
+</div>
+<div style="display: flex; align-items: baseline; gap: 12px">
+<div style="font-family: Sora, sans-serif; font-weight: 700; font-size: 48px; letter-spacing: -1px; color: #0F2A44">Brivo</div>
+<div style="font-family: Sora, sans-serif; font-weight: 600; font-size: 48px; letter-spacing: -1px; color: #0B7A6E">Clean</div>
+</div>
+<div style="font-size: 16px; letter-spacing: 3px; color: #3D5568">NETTOYAGE • CLEANING</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#0F2A44","options":["#0F2A44","#0B7A6E","#1F6FEB"]},"$preview":{"width":640,"height":420}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#0F2A44' };
+}
+}
+</script>
+</body>
+</html>

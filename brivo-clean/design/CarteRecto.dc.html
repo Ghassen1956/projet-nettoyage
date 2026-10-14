@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Carte de visite — recto</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&amp;family=DM+Sans:wght@500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B7A6E}a:hover{color:#0F2A44}
+</style>
+</helmet>
+<div style="width: 700px; height: 400px; box-sizing: border-box; background: #F3F8F7; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 26px; font-family: 'DM Sans', sans-serif">
+<div style="display: flex; align-items: center; gap: 24px">
+<svg width="96" height="115" viewBox="0 0 100 120" role="img" aria-label="Goutte d'eau avec une étincelle">
+<path d="M50 4 C50 4 12 52 12 78 A38 38 0 0 0 88 78 C88 52 50 4 50 4 Z" fill="#0E9F8E"></path>
+<path d="M30 80 A20 20 0 0 0 48 100" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.85"></path>
+<g transform="translate(62 62)"><path d="M0 -16 C2 -5 5 -2 16 0 C5 2 2 5 0 16 C-2 5 -5 2 -16 0 C-5 -2 -2 -5 0 -16 Z" fill="#FFFFFF"></path></g>
+</svg>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-family: Sora, sans-serif; font-weight: 700; font-size: 72px; line-height: 0.9; letter-spacing: -2px; color: #0F2A44">brivo</div>
+<div style="font-family: Sora, sans-serif; font-weight: 600; font-size: 22px; letter-spacing: 11px; color: #0B7A6E">CLEAN</div>
+</div>
+</div>
+<div style="font-size: 17px; letter-spacing: 2px; color: #3D5568">Nettoyage commercial • Commercial cleaning</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":700,"height":400}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

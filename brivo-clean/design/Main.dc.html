@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Brivo Clean — la goutte</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&amp;family=DM+Sans:wght@500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0B7A6E}a:hover{color:#0F2A44}
+</style>
+</helmet>
+<div style="width: 640px; height: 420px; box-sizing: border-box; background: #F3F8F7; display: flex; align-items: center; justify-content: center; gap: 28px; font-family: 'DM Sans', sans-serif">
+<svg width="112" height="134" viewBox="0 0 100 120" role="img" aria-label="Goutte d'eau avec une étincelle">
+<path d="M50 4 C50 4 12 52 12 78 A38 38 0 0 0 88 78 C88 52 50 4 50 4 Z" fill="{{accent}}"></path>
+<path d="M30 80 A20 20 0 0 0 48 100" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.85"></path>
+<g transform="translate(62 62)"><path d="M0 -16 C2 -5 5 -2 16 0 C5 2 2 5 0 16 C-2 5 -5 2 -16 0 C-5 -2 -2 -5 0 -16 Z" fill="#FFFFFF"></path></g>
+</svg>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-family: Sora, sans-serif; font-weight: 700; font-size: 84px; line-height: 0.9; letter-spacing: -2px; color: #0F2A44">brivo</div>
+<div style="font-family: Sora, sans-serif; font-weight: 600; font-size: 26px; letter-spacing: 12px; color: #0B7A6E">CLEAN</div>
+<div style="margin-top: 10px; font-size: 16px; color: #3D5568">Nettoyage • Cleaning — Ottawa • Gatineau</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#0E9F8E","options":["#0E9F8E","#1F6FEB","#0F2A44"]},"$preview":{"width":640,"height":420}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#0E9F8E' };
+}
+}
+</script>
+</body>
+</html>

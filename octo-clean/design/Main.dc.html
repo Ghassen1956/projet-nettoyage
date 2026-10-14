@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Octo Clean — mascotte</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&amp;family=Nunito:wght@600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0E2A47}a:hover{color:#0B7F8E}
+</style>
+</helmet>
+<div style="width: 640px; height: 420px; box-sizing: border-box; background: #EAF7F9; display: flex; align-items: center; justify-content: center; gap: 20px; font-family: Nunito, sans-serif">
+<svg width="230" height="230" viewBox="0 0 200 200" role="img" aria-label="Pieuvre souriante qui tient une éponge et un vaporisateur">
+<g fill="none" stroke="{{body}}" stroke-width="15" stroke-linecap="round">
+<path d="M70 118 C42 138 30 168 50 180 C62 186 68 175 58 168"></path>
+<path d="M86 126 C76 152 70 176 90 186"></path>
+<path d="M114 126 C124 152 130 176 110 186"></path>
+<path d="M130 118 C158 138 170 168 150 180 C138 186 132 175 142 168"></path>
+<path d="M64 100 C40 98 28 84 32 64"></path>
+<path d="M136 100 C160 98 172 84 168 64"></path>
+</g>
+<ellipse cx="100" cy="82" rx="46" ry="50" fill="{{body}}"></ellipse>
+<ellipse cx="82" cy="60" rx="10" ry="15" fill="#FFFFFF" opacity="0.35"></ellipse>
+<path d="M80 90 Q86 82 92 90 M108 90 Q114 82 120 90" fill="none" stroke="#0E2A47" stroke-width="4" stroke-linecap="round"></path>
+<circle cx="75" cy="101" r="6" fill="#FF8C7A" opacity="0.75"></circle>
+<circle cx="125" cy="101" r="6" fill="#FF8C7A" opacity="0.75"></circle>
+<path d="M92 104 Q100 113 108 104" fill="none" stroke="#0E2A47" stroke-width="4" stroke-linecap="round"></path>
+<rect x="17" y="40" width="30" height="22" rx="6" fill="#FFC857" transform="rotate(-12 32 51)"></rect>
+<circle cx="26" cy="49" r="2.5" fill="#E0A63A"></circle><circle cx="36" cy="54" r="2.5" fill="#E0A63A"></circle>
+<rect x="159" y="44" width="20" height="30" rx="5" fill="#FF7A59"></rect>
+<rect x="164" y="36" width="10" height="9" fill="#FF7A59"></rect>
+<path d="M160 30 H184 V37 H160 Z" fill="#0E2A47"></path>
+<path d="M160 33 H153" stroke="#0E2A47" stroke-width="3" stroke-linecap="round"></path>
+<g fill="#0B7F8E">
+<path transform="translate(40 22) scale(0.5)" d="M0 -16C2 -5 5 -2 16 0C5 2 2 5 0 16C-2 5 -5 2 -16 0C-5 -2 -2 -5 0 -16Z"></path>
+<path transform="translate(140 14) scale(0.4)" d="M0 -16C2 -5 5 -2 16 0C5 2 2 5 0 16C-2 5 -5 2 -16 0C-5 -2 -2 -5 0 -16Z"></path>
+<path transform="translate(186 118) scale(0.45)" d="M0 -16C2 -5 5 -2 16 0C5 2 2 5 0 16C-2 5 -5 2 -16 0C-5 -2 -2 -5 0 -16Z"></path>
+</g>
+<circle cx="146" cy="24" r="0" fill="none"></circle>
+<circle cx="140" cy="38" r="5" fill="none" stroke="#7FD3DE" stroke-width="2"></circle>
+<circle cx="150" cy="26" r="3" fill="none" stroke="#7FD3DE" stroke-width="2"></circle>
+</svg>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<div style="font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 92px; line-height: 0.85; color: #0E2A47">octo</div>
+<div style="font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 34px; letter-spacing: 10px; color: #0B7F8E">CLEAN</div>
+<div style="margin-top: 10px; font-size: 16px; font-weight: 700; color: #3B5670">Nettoyage • Cleaning — Ottawa • Gatineau</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"body":{"editor":"color","default":"#22B8C9","options":["#22B8C9","#FF7A59","#8B6CF0"]},"$preview":{"width":640,"height":420}}'>
+class Component extends DCLogic {
+renderVals() {
+return { body: this.props.body ?? '#22B8C9' };
+}
+}
+</script>
+</body>
+</html>

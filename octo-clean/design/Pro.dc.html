@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Octo Clean — logo pro</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&amp;family=Nunito:wght@600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#0E2A47}a:hover{color:#0B7F8E}
+</style>
+</helmet>
+<div style="width: 640px; height: 420px; box-sizing: border-box; background: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; font-family: Nunito, sans-serif">
+<svg width="136" height="136" viewBox="0 0 104 104" role="img" aria-label="Icône de pieuvre stylisée">
+<rect width="104" height="104" rx="28" fill="#0E2A47"></rect>
+<path d="M28 54 A24 24 0 0 1 76 54 V60 H28 Z" fill="{{body}}"></path>
+<g fill="none" stroke="{{body}}" stroke-width="6" stroke-linecap="round">
+<path d="M32 60 q-6 12 4 22"></path>
+<path d="M45 60 q-3 14 1 24"></path>
+<path d="M59 60 q3 14 -1 24"></path>
+<path d="M72 60 q6 12 -4 22"></path>
+</g>
+<circle cx="44" cy="48" r="4" fill="#0E2A47"></circle>
+<circle cx="60" cy="48" r="4" fill="#0E2A47"></circle>
+<path transform="translate(80 24) scale(0.55)" d="M0 -16C2 -5 5 -2 16 0C5 2 2 5 0 16C-2 5 -5 2 -16 0C-5 -2 -2 -5 0 -16Z" fill="#FFC857"></path>
+</svg>
+<div style="display: flex; align-items: baseline; gap: 10px">
+<div style="font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 60px; line-height: 1; color: #0E2A47">Octo</div>
+<div style="font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 60px; line-height: 1; color: #0B7F8E">Clean</div>
+</div>
+<div style="font-size: 16px; font-weight: 700; letter-spacing: 3px; color: #3B5670">NETTOYAGE • CLEANING</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"body":{"editor":"color","default":"#22B8C9","options":["#22B8C9","#FF7A59","#8B6CF0"]},"$preview":{"width":640,"height":420}}'>
+class Component extends DCLogic {
+renderVals() {
+return { body: this.props.body ?? '#22B8C9' };
+}
+}
+</script>
+</body>
+</html>

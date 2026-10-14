@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Brivo Clean — l'étincelle</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&amp;family=DM+Sans:wght@500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#7FE3D4}a:hover{color:#FFFFFF}
+</style>
+</helmet>
+<div style="width: 640px; height: 420px; box-sizing: border-box; background: #0F2A44; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; font-family: 'DM Sans', sans-serif">
+<div style="display: flex; align-items: flex-end; font-family: Sora, sans-serif; font-weight: 700; font-size: 104px; line-height: 1; letter-spacing: -3px; color: #FFFFFF">
+<span>br</span>
+<span style="position: relative; display: inline-block">ı<svg width="40" height="40" viewBox="-17 -17 34 34" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; transform: translateX(-50%)"><path d="M0 -16 C2 -5 5 -2 16 0 C5 2 2 5 0 16 C-2 5 -5 2 -16 0 C-5 -2 -2 -5 0 -16 Z" fill="{{accent}}"></path></svg></span>
+<span>vo</span>
+</div>
+<div style="font-family: Sora, sans-serif; font-weight: 600; font-size: 24px; letter-spacing: 14px; color: {{accent}}">CLEAN</div>
+<div style="font-size: 16px; color: #C9D6E2">Nettoyage • Cleaning — Ottawa • Gatineau</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#7FE3D4","options":["#7FE3D4","#FFD166","#9EC5FF"]},"$preview":{"width":640,"height":420}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#7FE3D4' };
+}
+}
+</script>
+</body>
+</html>

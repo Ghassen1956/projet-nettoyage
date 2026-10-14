@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 200 200">
+  <title>Octo Clean — mascotte pieuvre</title>
+  <g fill="none" stroke="#22B8C9" stroke-width="15" stroke-linecap="round">
+    <path d="M70 118C42 138 30 168 50 180C62 186 68 175 58 168"/>
+    <path d="M86 126C76 152 70 176 90 186"/>
+    <path d="M114 126C124 152 130 176 110 186"/>
+    <path d="M130 118C158 138 170 168 150 180C138 186 132 175 142 168"/>
+    <path d="M64 100C40 98 28 84 32 64"/>
+    <path d="M136 100C160 98 172 84 168 64"/>
+  </g>
+  <ellipse cx="100" cy="82" rx="46" ry="50" fill="#22B8C9"/>
+  <ellipse cx="82" cy="60" rx="10" ry="15" fill="#FFFFFF" opacity="0.35"/>
+  <path d="M80 90Q86 82 92 90M108 90Q114 82 120 90" fill="none" stroke="#0E2A47" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="75" cy="101" r="6" fill="#FF8C7A" opacity="0.75"/>
+  <circle cx="125" cy="101" r="6" fill="#FF8C7A" opacity="0.75"/>
+  <path d="M92 104Q100 113 108 104" fill="none" stroke="#0E2A47" stroke-width="4" stroke-linecap="round"/>
+  <rect x="17" y="40" width="30" height="22" rx="6" fill="#FFC857" transform="rotate(-12 32 51)"/>
+  <rect x="159" y="44" width="20" height="30" rx="5" fill="#FF7A59"/>
+  <rect x="164" y="36" width="10" height="9" fill="#FF7A59"/>
+  <path d="M160 30H184V37H160Z" fill="#0E2A47"/>
+</svg>

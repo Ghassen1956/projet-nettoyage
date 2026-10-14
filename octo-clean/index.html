@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Octo Clean</title>
+<meta name="description" content="Octo Clean — nettoyage commercial à Ottawa et Gatineau : bureaux, commerces, garderies, pharmacies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@400;600;700&display=swap">
+<style>
+/* Layout: clean single column, logo lockup hero beside a "how it works" panel, then services grid, zone strip, contact */
+:root{
+  --bg:#EAF7F9; --surface:#FFFFFF; --ink:#0E2A47; --muted:#3B5670; --line:#CFE6EA;
+  --teal:#22B8C9; --teal-ink:#0B6F7C; --navy:#0E2A47; --on-navy:#FFFFFF; --mint:#FFC857;
+  --display:"Baloo 2",ui-rounded,system-ui,sans-serif; --body:"Nunito",ui-sans-serif,system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0B1E31; --surface:#12283F; --ink:#EAF2F7; --muted:#A9BCCB; --line:#24405C;
+  --teal:#22B8C9; --teal-ink:#7FD3DE; --navy:#071524; --on-navy:#FFFFFF; --mint:#FFC857; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B1E31; --surface:#12283F; --ink:#EAF2F7; --muted:#A9BCCB; --line:#24405C;
+  --teal:#22B8C9; --teal-ink:#7FD3DE; --navy:#071524; --on-navy:#FFFFFF; --mint:#FFC857; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px}
+h1,h2,h3{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
+a{color:var(--teal-ink)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.logo b{font-family:var(--display);font-size:26px;letter-spacing:-1px}
+.logo span{font-family:var(--display);font-weight:600;font-size:12px;letter-spacing:5px;color:var(--teal-ink)}
+.bar-right{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{font:inherit;font-size:14px;font-weight:700;border:0;background:transparent;color:var(--muted);padding:8px 14px;min-height:40px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--navy);color:var(--on-navy)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;text-decoration:none;border-radius:999px;padding:12px 22px;min-height:46px;background:var(--mint);color:#0E2A47;border:0;font:inherit;font-weight:700;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+
+.hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:48px;align-items:center;padding-block:64px 56px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--teal-ink)}
+.hero h1{font-size:clamp(36px,5.2vw,58px);letter-spacing:-1.5px;margin-block:14px 18px}
+.hero h1 em{font-style:normal;color:var(--teal-ink)}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:56ch;margin:0 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.zones{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+.chip{font-size:14px;font-weight:700;padding:6px 14px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+
+.steps{background:var(--navy);color:var(--on-navy);border-radius:24px;padding:32px;position:relative;overflow:hidden}
+.steps h2{font-size:20px;margin-bottom:22px}
+.steps ol{list-style:none;margin:0;padding:0;display:grid;gap:20px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;counter-increment:s}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:700;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgba(255,200,87,.16);color:var(--mint)}
+.steps strong{display:block;font-size:17px}
+.steps span{font-size:15px;color:#C9D6E2}
+.steps svg.mascot{display:block;margin:-8px auto 8px;max-width:100%}
+
+section{padding-block:56px}
+.sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:32px;max-width:62ch}
+.sec-head h2{font-size:clamp(28px,3.6vw,38px);letter-spacing:-.5px}
+.sec-head p{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.card .ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:rgba(14,159,142,.12);color:var(--teal-ink)}
+.card h3{font-size:19px}
+.card p{margin:0;font-size:15px;color:var(--muted)}
+
+.why{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 48px}
+.why div{display:grid;grid-template-columns:28px minmax(0,1fr);gap:14px}
+.why h3{font-size:18px;margin-bottom:4px}
+.why p{margin:0;color:var(--muted);font-size:15px}
+.why svg{color:var(--teal-ink);margin-top:3px}
+
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+.people{display:grid;gap:14px}
+.person{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:16px 18px;border:1px solid var(--line);border-radius:14px}
+.person b{display:block;font-family:var(--display)}
+.person small{color:var(--muted);font-size:14px}
+.num{font-family:var(--display);font-weight:700;font-size:20px;font-variant-numeric:tabular-nums;color:var(--teal-ink);text-decoration:none}
+.copy{font:inherit;font-size:13px;font-weight:700;background:transparent;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:6px 12px;min-height:36px;cursor:pointer}
+
+footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:900px){.hero,.contact{grid-template-columns:minmax(0,1fr)}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.grid,.why{grid-template-columns:minmax(0,1fr)}.contact{padding:24px}.hero{padding-block:40px}.bar .btn{display:none}}
+@media (prefers-reduced-motion:no-preference){.btn{transition:transform .15s}.btn:hover{transform:translateY(-1px)}}
+</style>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="Octo Clean, accueil">
+      <svg width="40" height="40" viewBox="0 0 104 104" aria-hidden="true"><rect width="104" height="104" rx="28" fill="#0E2A47"/><path d="M28 54A24 24 0 0 1 76 54V60H28Z" fill="#22B8C9"/><g fill="none" stroke="#22B8C9" stroke-width="6" stroke-linecap="round"><path d="M32 60q-6 12 4 22"/><path d="M45 60q-3 14 1 24"/><path d="M59 60q3 14-1 24"/><path d="M72 60q6 12-4 22"/></g><circle cx="44" cy="48" r="4" fill="#0E2A47"/><circle cx="60" cy="48" r="4" fill="#0E2A47"/></svg>
+      <div><b>octo</b><br><span>CLEAN</span></div>
+    </a>
+    <div class="bar-right">
+      <div class="lang" role="group" aria-label="Langue / Language">
+        <button type="button" id="lang-fr" aria-pressed="true">FR</button>
+        <button type="button" id="lang-en" aria-pressed="false">EN</button>
+      </div>
+      <a class="btn" href="#contact" data-fr="Soumission gratuite" data-en="Free quote">Soumission gratuite</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow" data-fr="Nettoyage commercial · Ottawa – Gatineau" data-en="Commercial cleaning · Ottawa – Gatineau">Nettoyage commercial · Ottawa – Gatineau</div>
+      <h1 data-fr-html="Des lieux de travail <em>propres</em>, chaque matin." data-en-html="A <em>clean</em> workplace, every morning.">Des lieux de travail <em>propres</em>, chaque matin.</h1>
+      <p class="lead" data-fr="Nous nettoyons vos bureaux, commerces, garderies et pharmacies le soir ou la fin de semaine, après la fermeture. Vous arrivez le matin, tout est prêt." data-en="We clean your offices, stores, daycares and pharmacies in the evening or on weekends, after closing. You arrive in the morning and everything is ready.">Nous nettoyons vos bureaux, commerces, garderies et pharmacies le soir ou la fin de semaine, après la fermeture. Vous arrivez le matin, tout est prêt.</p>
+      <div class="cta">
+        <a class="btn" href="#contact" data-fr="Demander une soumission" data-en="Request a quote">Demander une soumission</a>
+        <a class="btn ghost" href="#services" data-fr="Nos services" data-en="Our services">Nos services</a>
+      </div>
+      <div class="zones">
+        <span class="chip">Ottawa</span><span class="chip">Gatineau</span><span class="chip" data-fr="Et environs" data-en="And surrounding area">Et environs</span>
+      </div>
+    </div>
+    <aside class="steps" aria-labelledby="how">
+      <svg class="mascot" width="150" height="150" viewBox="0 0 200 200" role="img" aria-label="La pieuvre Octo Clean, avec une éponge et un vaporisateur"><g fill="none" stroke="#22B8C9" stroke-width="15" stroke-linecap="round"><path d="M70 118C42 138 30 168 50 180C62 186 68 175 58 168"/><path d="M86 126C76 152 70 176 90 186"/><path d="M114 126C124 152 130 176 110 186"/><path d="M130 118C158 138 170 168 150 180C138 186 132 175 142 168"/><path d="M64 100C40 98 28 84 32 64"/><path d="M136 100C160 98 172 84 168 64"/></g><ellipse cx="100" cy="82" rx="46" ry="50" fill="#22B8C9"/><ellipse cx="82" cy="60" rx="10" ry="15" fill="#fff" opacity=".35"/><path d="M80 90Q86 82 92 90M108 90Q114 82 120 90" fill="none" stroke="#0E2A47" stroke-width="4" stroke-linecap="round"/><circle cx="75" cy="101" r="6" fill="#FF8C7A" opacity=".75"/><circle cx="125" cy="101" r="6" fill="#FF8C7A" opacity=".75"/><path d="M92 104Q100 113 108 104" fill="none" stroke="#0E2A47" stroke-width="4" stroke-linecap="round"/><rect x="17" y="40" width="30" height="22" rx="6" fill="#FFC857" transform="rotate(-12 32 51)"/><rect x="159" y="44" width="20" height="30" rx="5" fill="#FF7A59"/><rect x="164" y="36" width="10" height="9" fill="#FF7A59"/><path d="M160 30H184V37H160Z" fill="#E4ECF2"/></svg>
+      <h2 id="how" data-fr="Comment ça marche" data-en="How it works">Comment ça marche</h2>
+      <ol>
+        <li><div><strong data-fr="Visite gratuite" data-en="Free visit">Visite gratuite</strong><span data-fr="On vient voir vos locaux et vos besoins." data-en="We visit your space and listen to your needs.">On vient voir vos locaux et vos besoins.</span></div></li>
+        <li><div><strong data-fr="Soumission claire" data-en="Clear quote">Soumission claire</strong><span data-fr="Un prix fixe, sans surprise." data-en="A fixed price, no surprises.">Un prix fixe, sans surprise.</span></div></li>
+        <li><div><strong data-fr="Nettoyage régulier" data-en="Regular cleaning">Nettoyage régulier</strong><span data-fr="À l'heure qui vous convient : soir, nuit ou fin de semaine." data-en="At the time that suits you: evenings, nights or weekends.">À l'heure qui vous convient : soir, nuit ou fin de semaine.</span></div></li>
+      </ol>
+    </aside>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow" data-fr="Services" data-en="Services">Services</div>
+        <h2 data-fr="Un nettoyage adapté à chaque lieu" data-en="Cleaning adapted to every space">Un nettoyage adapté à chaque lieu</h2>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg></div>
+          <h3 data-fr="Bureaux" data-en="Offices">Bureaux</h3>
+          <p data-fr="Postes de travail, cuisines, salles de bain, planchers et poubelles." data-en="Workstations, kitchens, washrooms, floors and garbage.">Postes de travail, cuisines, salles de bain, planchers et poubelles.</p>
+        </article>
+        <article class="card">
+          <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9M3 9h18v2a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0V9zM5 13v8h14v-8"/></svg></div>
+          <h3 data-fr="Commerces" data-en="Stores">Commerces</h3>
+          <p data-fr="Vitrines, comptoirs, cabines d'essayage et planchers à fort passage." data-en="Windows, counters, fitting rooms and high-traffic floors.">Vitrines, comptoirs, cabines d'essayage et planchers à fort passage.</p>
+        </article>
+        <article class="card">
+          <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="3"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg></div>
+          <h3 data-fr="Garderies" data-en="Daycares">Garderies</h3>
+          <p data-fr="Désinfection des jouets, tables et surfaces touchées par les enfants." data-en="Disinfecting toys, tables and surfaces children touch.">Désinfection des jouets, tables et surfaces touchées par les enfants.</p>
+        </article>
+        <article class="card">
+          <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M12 8v8M8 12h8"/></svg></div>
+          <h3 data-fr="Pharmacies" data-en="Pharmacies">Pharmacies</h3>
+          <p data-fr="Comptoirs, salles d'attente et espaces clients, avec soin et discrétion." data-en="Counters, waiting areas and customer spaces, with care and discretion.">Comptoirs, salles d'attente et espaces clients, avec soin et discrétion.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow" data-fr="Pourquoi Octo Clean" data-en="Why Octo Clean">Pourquoi Octo Clean</div>
+        <h2 data-fr="Une petite équipe locale, sérieuse et disponible" data-en="A small local team, reliable and available">Une petite équipe locale, sérieuse et disponible</h2>
+      </div>
+      <div class="why">
+        <div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><h3 data-fr="Horaires flexibles" data-en="Flexible hours">Horaires flexibles</h3><p data-fr="Le soir, la nuit ou la fin de semaine, sans déranger votre activité." data-en="Evenings, nights or weekends, without disrupting your business.">Le soir, la nuit ou la fin de semaine, sans déranger votre activité.</p></div></div>
+        <div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><h3 data-fr="Un contact direct" data-en="Direct contact">Un contact direct</h3><p data-fr="Vous parlez directement avec les propriétaires, pas avec un centre d'appels." data-en="You talk directly to the owners, not a call centre.">Vous parlez directement avec les propriétaires, pas avec un centre d'appels.</p></div></div>
+        <div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><h3 data-fr="Soumission gratuite" data-en="Free quote">Soumission gratuite</h3><p data-fr="On visite vos locaux et on vous donne un prix fixe, sans engagement." data-en="We visit your space and give you a fixed price, with no commitment.">On visite vos locaux et on vous donne un prix fixe, sans engagement.</p></div></div>
+        <div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><h3 data-fr="Service bilingue" data-en="Bilingual service">Service bilingue</h3><p data-fr="On vous sert en français ou en anglais, des deux côtés de la rivière." data-en="We serve you in French or English, on both sides of the river.">On vous sert en français ou en anglais, des deux côtés de la rivière.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <div class="sec-head" style="margin:0">
+          <div class="eyebrow" data-fr="Contact" data-en="Contact">Contact</div>
+          <h2 data-fr="Parlons de vos locaux" data-en="Let's talk about your space">Parlons de vos locaux</h2>
+          <p data-fr="Appelez-nous ou écrivez-nous pour une visite et une soumission gratuites. Réponse en moins de 24 heures." data-en="Call or write to us for a free visit and quote. We reply within 24 hours.">Appelez-nous ou écrivez-nous pour une visite et une soumission gratuites. Réponse en moins de 24 heures.</p>
+        </div>
+        <div class="people">
+          <div class="person"><div><b>Ons Ben Temarzit</b><small data-fr="Associé" data-en="Partner">Associé</small></div><div style="display:flex;gap:10px;align-items:center"><a class="num" href="tel:+13432541353">(343) 254-1353</a><button class="copy" type="button" data-copy="+1 343 254 1353" data-fr="Copier" data-en="Copy">Copier</button></div></div>
+          <div class="person"><div><b>Ghassen Ben Hassan</b><small data-fr="Associé" data-en="Partner">Associé</small></div><div style="display:flex;gap:10px;align-items:center"><a class="num" href="tel:+15148877050">(514) 887-7050</a><button class="copy" type="button" data-copy="+1 514 887 7050" data-fr="Copier" data-en="Copy">Copier</button></div></div>
+          <div class="person"><div><b data-fr="Courriel" data-en="Email">Courriel</b><small>info@octoclean.ca</small></div><button class="copy" type="button" data-copy="info@octoclean.ca" data-fr="Copier" data-en="Copy">Copier</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Octo Clean</span>
+    <span data-fr="Nettoyage commercial · Ottawa – Gatineau" data-en="Commercial cleaning · Ottawa – Gatineau">Nettoyage commercial · Ottawa – Gatineau</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var fr=document.getElementById('lang-fr'), en=document.getElementById('lang-en');
+  function setLang(l){
+    document.documentElement.lang=l;
+    fr.setAttribute('aria-pressed', l==='fr'); en.setAttribute('aria-pressed', l==='en');
+    document.querySelectorAll('[data-'+l+']').forEach(function(el){ el.textContent=el.getAttribute('data-'+l); });
+    document.querySelectorAll('[data-'+l+'-html]').forEach(function(el){ el.innerHTML=el.getAttribute('data-'+l+'-html'); });
+    try{ localStorage.setItem('octo-lang', l); }catch(e){}
+  }
+  fr.addEventListener('click',function(){setLang('fr')});
+  en.addEventListener('click',function(){setLang('en')});
+  try{ var saved=localStorage.getItem('octo-lang'); if(saved==='en') setLang('en'); }catch(e){}
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.getAttribute('data-copy'), lang=document.documentElement.lang, done=lang==='en'?'Copied':'Copié';
+      var restore=b.getAttribute('data-'+lang)||b.textContent;
+      function ok(){ b.textContent=done; setTimeout(function(){ b.textContent=restore; },1500); }
+      try{ navigator.clipboard.writeText(t).then(ok,function(){}); }catch(e){}
+    });
+  });
+})();
+</script>
+</html>

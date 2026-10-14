@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projet nettoyage — deux propositions</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap">
+<style>
+:root{--bg:#F4F7F8;--card:#FFFFFF;--ink:#0E2A47;--muted:#4A6175;--line:#D6E2E6}
+@media (prefers-color-scheme: dark){:root{--bg:#0B1E31;--card:#12283F;--ink:#EAF2F7;--muted:#A9BCCB;--line:#24405C;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Nunito,system-ui,sans-serif;line-height:1.6;padding:48px 20px}
+main{max-width:900px;margin:0 auto}
+h1{margin:0 0 8px;font-size:clamp(28px,4vw,40px)}
+p{color:var(--muted);margin:0 0 32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+a.card{display:flex;flex-direction:column;align-items:center;gap:14px;padding:32px 24px;background:var(--card);border:1px solid var(--line);border-radius:20px;text-decoration:none;color:var(--ink)}
+a.card:hover{border-color:#22B8C9}
+a.card:focus-visible{outline:3px solid #22B8C9;outline-offset:3px}
+a.card img{height:120px;width:auto}
+a.card b{font-size:22px}
+a.card span{color:var(--muted);font-size:15px;text-align:center}
+</style>
+</head>
+<body>
+<main>
+  <h1>Projet nettoyage commercial</h1>
+  <p>Deux propositions de nom et d'identité, à choisir avec Ons. Ottawa • Gatineau.</p>
+  <div class="grid">
+    <a class="card" href="brivo-clean/"><img src="brivo-clean/logo/goutte.svg" alt=""><b>Brivo Clean</b><span>Sobre et professionnel : une goutte d'eau et une étincelle.</span></a>
+    <a class="card" href="octo-clean/"><img src="octo-clean/logo/pieuvre.svg" alt=""><b>Octo Clean</b><span>Sympathique et mémorable : une pieuvre aux huit bras qui nettoient.</span></a>
+  </div>
+</main>
+</body>
+</html>

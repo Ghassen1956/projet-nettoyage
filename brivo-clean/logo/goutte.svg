@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="480" viewBox="0 0 100 120">
+  <title>Brivo Clean — goutte</title>
+  <path d="M50 4C50 4 12 52 12 78A38 38 0 0 0 88 78C88 52 50 4 50 4Z" fill="#0E9F8E"/>
+  <path d="M30 80A20 20 0 0 0 48 100" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+  <g transform="translate(62 62)"><path d="M0-16C2-5 5-2 16 0C5 2 2 5 0 16C-2 5-5 2-16 0C-5-2-2-5 0-16Z" fill="#FFFFFF"/></g>
+</svg>
