@@ -19,10 +19,12 @@ Vérifications faites le 13 octobre 2026. À refaire juste avant l'enregistremen
 index.html                 Page d'accueil qui présente les deux propositions
 brivo-clean/
   index.html               Site web bilingue (FR / EN)
+  cartes.html              Cartes de visite (recto + verso d'Ons et de Ghassen)
   logo/                    Logos en SVG
   design/                  Sources des logos et cartes de visite (canevas Claude)
 octo-clean/
   index.html               Site web bilingue (FR / EN)
+  cartes.html              Cartes de visite (recto + verso d'Ons et de Ghassen)
   logo/                    Logos en SVG (mascotte et icône)
   design/                  Sources des logos et cartes de visite (canevas Claude)
 ```
